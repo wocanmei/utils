@@ -24,7 +24,7 @@ sync_lock()
 sync_data()
 {
     rsync -e "ssh -p ${remote_port}" -az ${remote_user}@${remote_host}:${remote_dir} ${local_dir}.tmp/
-    #scp  -r -P ${remote_port} ${remote_user}@${remote_host}:${remote_dir} ${local_dir}.tmp
+    #scp  -r -P ${remote_port} ${remote_user}@${remote_host}:${remote_dir}* ${local_dir}.tmp/
 }
 
 sync_ack() 
